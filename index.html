@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'messenger-blue': '#0084FF',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    <!-- Navigation -->
+    <nav class="flex items-center justify-between px-6 py-4 md:px-12">
+        <div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Facebook_Messenger_logo_2020.svg/150px-Facebook_Messenger_logo_2020.svg.png" alt="Messenger Logo" class="h-10">
+        </div>
+        <div class="hidden md:flex items-center space-x-6 text-sm">
+            <div class="relative group">
+                <button class="font-medium flex items-center">
+                    Features
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+            </div>
+            <a href="#" class="font-medium">Privacy and Safety</a>
+            <a href="#" class="font-medium">Desktop App</a>
+            <a href="#" class="font-medium">For Developers</a>
+            <a href="#" class="font-medium">Help Center</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12 md:px-12 md:py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <!-- Left Column: Text Content -->
+            <div>
+                <h1 class="text-5xl md:text-6xl font-bold text-messenger-blue leading-tight mb-6">
+                    A place for meaningful conversations
+                </h1>
+                <p class="text-gray-700 text-lg mb-8">
+                    Messenger helps you connect with your Facebook friends and family, build your community, and deepen your interests.
+                </p>
+                
+                <!-- Login Form -->
+                <div class="max-w-md">
+                    <div class="mb-4">
+                        <input type="text" placeholder="Email or phone number" class="w-full p-3 border border-gray-300 rounded-md">
+                    </div>
+                    <div class="mb-4">
+                        <input type="password" placeholder="Password" class="w-full p-3 border border-gray-300 rounded-md">
+                    </div>
+                    <div class="flex items-center justify-between mb-4">
+                        <button class="bg-messenger-blue text-white font-semibold py-2 px-6 rounded-md hover:bg-blue-600 transition">
+                            Log in
+                        </button>
+                        <a href="#" class="text-messenger-blue text-sm hover:underline">
+                            Forgotten your password?
+                        </a>
+                    </div>
+                    <div class="flex items-center mb-8">
+                        <input type="checkbox" id="keep-signed" class="mr-2">
+                        <label for="keep-signed" class="text-sm text-gray-600">Keep me signed in</label>
+                    </div>
+                    
+                    <!-- Download buttons -->
+                    <div class="flex space-x-4">
+                        <a href="#" class="block">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="Download on App Store" class="h-10">
+                        </a>
+                        <a href="#" class="block">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Get_it_from_Microsoft_Badge.svg/1200px-Get_it_from_Microsoft_Badge.svg.png" alt="Get it from Microsoft" class="h-10">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Column: App Screenshots -->
+            <div class="relative">
+                <div class="relative z-10">
+                    <img src="https://scontent.xx.fbcdn.net/v/t39.8562-6/120973513_338186077283942_8148888812427562036_n.png?_nc_cat=1&ccb=1-7&_nc_sid=ad8a9d&_nc_ohc=1HZT0gLOhRMAX8LeFLG&_nc_ht=scontent.xx&oh=00_AfDgNpAWvCEoGgkWxiD8QdHOmQUHwvD9RwLUYERMPpJ0hA&oe=64B54D04" 
+                        alt="Messenger App Screenshot" 
+                        class="mx-auto max-w-full rounded-3xl shadow-2xl custom-shadow">
+                </div>
+                <div class="absolute -top-10 -left-10 z-0">
+                    <img src="https://scontent.xx.fbcdn.net/v/t39.8562-6/120947616_1263962163960267_7251746049698547490_n.png?_nc_cat=1&ccb=1-7&_nc_sid=ad8a9d&_nc_ohc=1HF53dNDvskAX_62M9c&_nc_ht=scontent.xx&oh=00_AfBIhVeZW_XA9eLq3ZWgtBLA-qrfEetRDrC_WWKC6qnT6g&oe=64B30248" 
+                        alt="Messenger Mascot" 
+                        class="w-32 h-32 float-animation">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html> 
